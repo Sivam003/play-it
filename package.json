@@ -1,7 +1,7 @@
 {
   "homepage": "https://Sivam003.github.io/play-it/",
   "name": "music-player",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
