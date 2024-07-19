@@ -56,7 +56,7 @@ function App() {
     <div className="container">
       <div className="upper">
         <div className="circle">
-          <img src={songList[currSong].cover} alt="" />
+          <img key={currSong} src={songList[currSong].cover} alt="" className= {isPlaying ? 'animate' : 'animate pause'}/>
         </div>
         <audio 
           ref={audioRef}
@@ -70,9 +70,9 @@ function App() {
       </div>
       <div className="lower">
         <div className="controls">
-          <button onClick={playPrevSong}><SkipPreviousIcon /></button>
-          <button onClick={handlePlayPause}>{!isPlaying ? <PlayArrowIcon /> : <PauseIcon />}</button>
-          <button onClick={playNextSong}><SkipNextIcon /></button>
+          <button className='btn' onClick={playPrevSong}><SkipPreviousIcon className='icons' /></button>
+          <button className='btn' onClick={handlePlayPause}>{!isPlaying ? <PlayArrowIcon className='icons' /> : <PauseIcon className='icons' />}</button>
+          <button className='btn' onClick={playNextSong}><SkipNextIcon className='icons' /></button>
         </div>
         <div className="progress-bar">
           <input type="range" min="0" max="100" value={progress} onChange={handleSeek}/>
